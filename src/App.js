@@ -2,6 +2,7 @@ import { useState } from "react";
 import EighteenWheeler from "./components/EighteenWheeler";
 import TrafficControlDevice from "./components/TrafficControlDevice";
 import SUV from "./components/SUV";
+import VehicleStatus from "./components/VehicleStatus";
 
 function App() {
   const [currentVehicle, setCurrentVehicle] = useState(true);
@@ -13,21 +14,22 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app-container">
+      <header className="app-header">
         <h2>E2Open Candidate Exercises</h2>
       </header>
       <div className="user-interface-container">
-        <button onClick={() => setCurrentVehicle(!currentVehicle)}>
-          Change Vehicle
-        </button>
-      </div>
-      <div className="vehicle-traffic-container">
-        <div className="vehicle-container">{vehicle}</div>
-        <div>
+        <div className="vehicle-container">
+          {vehicle}
+          <button onClick={() => setCurrentVehicle(!currentVehicle)}>
+            Change Vehicle
+          </button>
+        </div>
+        <div className="traffic-container">
           <TrafficControlDevice />
         </div>
       </div>
+      <VehicleStatus />
     </div>
   );
 }

@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* App */
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.user-interface-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.vehicle-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  max-width: 50%;
+}
+
+.traffic-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  max-width: 50%;
+}
+
+
+/* .app-container {
+  display: flex;
+  justify-content: start;
+} */
+
+
+/* Eighteen Wheeler */
+
+.eighteen-wheeler-image {
+  height: 25rem;
+}
+
+/* Vehicle Status */
+
+.vehicle-status-container {
+  border: 1px solid #ccc;
+}
