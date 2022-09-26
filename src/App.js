@@ -7,7 +7,7 @@ import VehicleStatus from "./components/VehicleStatus";
 function App() {
   const [currentVehicle, setCurrentVehicle] = useState(true);
   const [currentVehicleStatus, setCurrentVehicleStatus] = useState("stop");
-  const [currentLightStatus, setCurrentLightStatus] = useState("Red");
+  const [currentLightStatus, setCurrentLightStatus] = useState("Green");
 
   function onVehicleStatusChange(e) {
     const status = e.currentTarget.value;

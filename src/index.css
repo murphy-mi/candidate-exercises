@@ -13,7 +13,6 @@ code {
 }
 
 /* App */
-
 .app-header {
   display: flex;
   justify-content: center;
@@ -28,7 +27,8 @@ code {
 
 .vehicle-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   max-width: 50%;
@@ -38,6 +38,7 @@ code {
 .traffic-container {
   display: flex;
   justify-content: center;
+  padding: 1rem 2rem 1rem 2rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   max-width: 50%;
@@ -45,18 +46,11 @@ code {
 }
 
 .change-vehicle-button {
-  position: relative;
-  margin-right: 0;
+  margin-bottom: 2rem;
   max-height: 3rem;
   border-radius: 2rem;
   cursor: pointer;
 }
-
-/* .app-container {
-  display: flex;
-  justify-content: start;
-} */
-
 
 /* Eighteen Wheeler */
 
@@ -69,5 +63,5 @@ code {
 .vehicle-status-container {
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  margin: 1rem 20% 1rem 20%;
+  margin: 1rem 20.6% 1rem 20.6%;
 }
