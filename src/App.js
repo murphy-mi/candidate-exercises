@@ -7,14 +7,20 @@ import VehicleStatus from "./components/VehicleStatus";
 function App() {
   const [currentVehicle, setCurrentVehicle] = useState(true);
   const [currentVehicleStatus, setCurrentVehicleStatus] = useState("stop");
-  const [currentLightStatus, setCurrentLightStatus] = useState("red");
+  const [currentLightStatus, setCurrentLightStatus] = useState("Red");
 
-  function onStatusChange(e) {
+  function onVehicleStatusChange(e) {
+    // console.log(e.currentTarget.value);
     const status = e.currentTarget.value;
     if (currentVehicleStatus === "forward" && status === "forward") {
-      throw "Cannot move forward twice!";
+      throw new Error("Cannot move forward twice!");
     }
     setCurrentVehicleStatus(status);
+  }
+
+  function onLightStatusChange(e) {
+    let light = e.currentTarget.value;
+    setCurrentLightStatus(light);
   }
 
   let vehicle;
@@ -22,12 +28,15 @@ function App() {
     vehicle = (
       <EighteenWheeler
         status={currentVehicleStatus}
-        onStatusChange={onStatusChange}
+        onStatusChange={onVehicleStatusChange}
       />
     );
   } else {
     vehicle = (
-      <SUV status={currentVehicleStatus} onStatusChange={onStatusChange} />
+      <SUV
+        status={currentVehicleStatus}
+        onStatusChange={onVehicleStatusChange}
+      />
     );
   }
 
@@ -47,10 +56,17 @@ function App() {
           </button>
         </div>
         <div className="traffic-container">
-          <TrafficControlDevice />
+          <TrafficControlDevice
+            vehicleStatus={currentVehicleStatus}
+            lightStatus={currentLightStatus}
+            onLightStatusChange={onLightStatusChange}
+          />
         </div>
       </div>
-      <VehicleStatus status={currentVehicleStatus} />
+      <VehicleStatus
+        status={currentVehicleStatus}
+        lightStatus={currentLightStatus}
+      />
     </div>
   );
 }

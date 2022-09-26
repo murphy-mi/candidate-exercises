@@ -30,7 +30,7 @@ function SUV({ status, onStatusChange }) {
           <BsArrow90DegRight />
         </button>
         <button
-          value="run over ford pinto"
+          value="pinto"
           onClick={onStatusChange}
           disabled={status !== "forward"}
         >

@@ -1,13 +1,15 @@
-import { useState } from "react";
 import GreenLightIMG from "../assets/traffic-green.png";
 import YellowLightIMG from "../assets/traffic-yellow.png";
 import RedLightIMG from "../assets/traffic-red.png";
+import GreenLightLeftIMG from "../assets/traffic-green-left.png";
 
-function TrafficControlDevice() {
-  const [currentLight, setCurrentLight] = useState("Red");
-
+function TrafficControlDevice({
+  vehicleStatus,
+  lightStatus,
+  onLightStatusChange,
+}) {
   let light;
-  switch (currentLight) {
+  switch (lightStatus) {
     case "Green":
       light = GreenLightIMG;
       break;
@@ -15,7 +17,7 @@ function TrafficControlDevice() {
       light = YellowLightIMG;
       break;
     case "Left-Turn Green":
-      light = GreenLightIMG;
+      light = GreenLightLeftIMG;
       break;
     default:
       light = RedLightIMG;
@@ -23,13 +25,19 @@ function TrafficControlDevice() {
 
   return (
     <div className="light-container">
-      <h2>Traffic Light</h2>
+      <h3>Traffic Light</h3>
       <img className="vehicle-traffic-image" src={light} alt="Traffic Light" />
       <div className="traffic-controls-container">
-        <button onClick={() => setCurrentLight("Green")}>Green</button>
-        <button onClick={() => setCurrentLight("Yellow")}>Yellow</button>
-        <button onClick={() => setCurrentLight("Red")}>Red</button>
-        <button onClick={() => setCurrentLight("Left-Turn Green")}>
+        <button value="Green" onClick={onLightStatusChange}>
+          Green
+        </button>
+        <button value="Yellow" onClick={onLightStatusChange}>
+          Yellow
+        </button>
+        <button value="Red" onClick={onLightStatusChange}>
+          Red
+        </button>
+        <button value="Left-Turn Green" onClick={onLightStatusChange}>
           Left-Turn Green
         </button>
       </div>
