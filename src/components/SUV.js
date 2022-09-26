@@ -2,7 +2,7 @@ import React from "react";
 import SUVIMG from "../assets/SUV.png";
 import { BsArrow90DegLeft, BsArrow90DegRight, BsArrowUp } from "react-icons/bs";
 
-function SUV({ status, onStatusChange }) {
+function SUV({ vehicleStatus, lightStatus, onStatusChange }) {
   return (
     <div className="eighteen-wheeler-container">
       <h3 style={{ marginLeft: "2rem" }}>SUV</h3>
@@ -15,7 +15,9 @@ function SUV({ status, onStatusChange }) {
         <button
           value="left"
           onClick={onStatusChange}
-          disabled={status === "stop"}
+          disabled={
+            vehicleStatus === "stop" || lightStatus !== "Left-Turn Green"
+          }
         >
           <BsArrow90DegLeft />
         </button>
@@ -25,14 +27,14 @@ function SUV({ status, onStatusChange }) {
         <button
           value="right"
           onClick={onStatusChange}
-          disabled={status === "stop"}
+          disabled={vehicleStatus === "stop"}
         >
           <BsArrow90DegRight />
         </button>
         <button
           value="pinto"
           onClick={onStatusChange}
-          disabled={status !== "forward"}
+          disabled={vehicleStatus !== "forward"}
         >
           Run Over Ford Pinto
         </button>

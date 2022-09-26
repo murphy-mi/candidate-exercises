@@ -10,12 +10,12 @@ function App() {
   const [currentLightStatus, setCurrentLightStatus] = useState("Red");
 
   function onVehicleStatusChange(e) {
-    // console.log(e.currentTarget.value);
     const status = e.currentTarget.value;
     if (currentVehicleStatus === "forward" && status === "forward") {
       throw new Error("Cannot move forward twice!");
     }
     setCurrentVehicleStatus(status);
+    setCurrentLightStatus("Green");
   }
 
   function onLightStatusChange(e) {
@@ -27,14 +27,16 @@ function App() {
   if (currentVehicle) {
     vehicle = (
       <EighteenWheeler
-        status={currentVehicleStatus}
+        vehicleStatus={currentVehicleStatus}
+        lightStatus={currentLightStatus}
         onStatusChange={onVehicleStatusChange}
       />
     );
   } else {
     vehicle = (
       <SUV
-        status={currentVehicleStatus}
+        vehicleStatus={currentVehicleStatus}
+        lightStatus={currentLightStatus}
         onStatusChange={onVehicleStatusChange}
       />
     );
