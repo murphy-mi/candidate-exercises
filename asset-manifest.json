@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/candidate-exercises/static/css/main.f9d176d2.css",
+    "main.js": "/candidate-exercises/static/js/main.53d84ead.js",
+    "static/js/787.f274a94d.chunk.js": "/candidate-exercises/static/js/787.f274a94d.chunk.js",
+    "static/media/traffic-yellow.png": "/candidate-exercises/static/media/traffic-yellow.96472c1311150296bead.png",
+    "static/media/traffic-red.png": "/candidate-exercises/static/media/traffic-red.986e1cf76dbac78afd70.png",
+    "static/media/traffic-green.png": "/candidate-exercises/static/media/traffic-green.e9a69f9393153e0d2919.png",
+    "static/media/traffic-green-left.png": "/candidate-exercises/static/media/traffic-green-left.c39d8cbc69e0e791fc2e.png",
+    "static/media/EighteenWheeler.png": "/candidate-exercises/static/media/EighteenWheeler.fba4bc3c93d156d3ae78.png",
+    "static/media/SUV.png": "/candidate-exercises/static/media/SUV.0de9617160144fb4f580.png",
+    "index.html": "/candidate-exercises/index.html",
+    "main.f9d176d2.css.map": "/candidate-exercises/static/css/main.f9d176d2.css.map",
+    "main.53d84ead.js.map": "/candidate-exercises/static/js/main.53d84ead.js.map",
+    "787.f274a94d.chunk.js.map": "/candidate-exercises/static/js/787.f274a94d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9d176d2.css",
+    "static/js/main.53d84ead.js"
+  ]
+}
